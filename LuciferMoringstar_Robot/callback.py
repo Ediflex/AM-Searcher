@@ -250,7 +250,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                 if f_caption is None:
                     f_caption = LuciferMoringstar.FILE_CAPTIONS
                 buttons = [[
-                  InlineKeyboardButton('🧑‍💻 How To Own 🧑‍💻', url='https://t.me/howtodoyt')
+                  InlineKeyboardButton('🧑‍💻 How To Own 🧑‍💻', url='https://t.me/ediflex')
                   ]]                 
                 
                 await query.answer()
@@ -270,21 +270,21 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                 buttons = [[
                  InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
                  ],[
-                 InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-                 InlineKeyboardButton("😎 About", callback_data="about") 
+                 InlineKeyboardButton("𝗠𝗼𝘃𝗶𝗲", url="https://t.me/appleallmovies")
+                 InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽", url="https://t.me/applemoviesgroupsearch")
                  ],[
-                 InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/LkY2feKT2k0"),
-                 InlineKeyboardButton("🤖 Update", url="https://t.me/HTDGROUPFORMOVIES")
+                 InlineKeyboardButton("😎 About", callback_data="about"),
+                 ]]
                  ]]
             else:
                 buttons = [[
                  InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
                  ],[
-                 InlineKeyboardButton("ℹ️ Help", callback_data="bot_owner"),
-                 InlineKeyboardButton("😎 About", callback_data="about") 
+                 InlineKeyboardButton("𝗠𝗼𝘃𝗶𝗲", url="https://t.me/appleallmovies")
+                 InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽", url="https://t.me/applemoviesgroupsearch")
                  ],[
-                 InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/LkY2feKT2k0"),
-                 InlineKeyboardButton("🤖 Update", url="https://t.me/HTDGROUPFORMOVIES")
+                 InlineKeyboardButton("😎 About", callback_data="about"),
+                 ]]
                  ]]               
             await query.message.edit(text=START_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
