@@ -17,21 +17,21 @@ async def start_message(bot, message):
             buttons = [[
              InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
              ],[
-             InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-             InlineKeyboardButton("😎 About", callback_data="about") 
+             InlineKeyboardButton("𝗠𝗼𝘃𝗶𝗲", url="https://t.me/appleallmovies"),
+             InlineKeyboardButtonn("𝗚𝗿𝗼𝘂𝗽", url="https://t.me/applemoviesgroupsearch")
              ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/LkY2feKT2k0"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/HTDGROUPFORMOVIES")
+             ],[
+             InlineKeyboardButton("😎 About", callback_data="about")
              ]]
         else:
             buttons = [[
              InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
              ],[
-             InlineKeyboardButton("ℹ️ Help", callback_data="bot_owner"),
-             InlineKeyboardButton("😎 About", callback_data="about") 
+             InlineKeyboardButton("𝗠𝗼𝘃𝗶𝗲", url="https://t.me/appleallmovies"),
+             InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽", url="https://t.me/applemoviesgroupsearch")
              ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/LkY2feKT2k0"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/HTDGROUPFORMOVIES")
+             ],[
+             InlineKeyboardButton("😎 About", callback_data="about")
              ]]    
         await message.reply_photo(photo = choice(BOT_PICS), caption=START_MSG.format(mention = message.from_user.mention, bot_name = bot_info.BOT_NAME, bot_username = bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons))
         
